@@ -1,3 +1,5 @@
+@import url(https://use.fontawesome.com/releases/v6.0.0/css/all.css);
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -44,9 +46,25 @@ body {
   align-items: center;
   justify-content: flex-start;
   height: 50px;
-  padding: 0 20px;
+  padding: 0 10px;
   border-bottom: 1px #ddd solid;
   margin-left: -3px;
+}
+
+span {
+  width: 80%;  
+  padding: 5px;
+  border: none;
+}
+
+span:active,
+span:hover,
+span:link {
+  border: none;
+}
+
+.add-button {
+  background: none;
 }
 
 .add-item input[type="text"]::placeholder {
