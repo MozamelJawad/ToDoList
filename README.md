@@ -1,5 +1,5 @@
 
-### <h2 align="center"><b>To Do List Project </b></h2>
+## To Do List Project
 
 <a name="readme-top"></a>
 
