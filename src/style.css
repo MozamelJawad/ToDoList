@@ -57,10 +57,17 @@ span {
   border: none;
 }
 
-span:active,
-span:hover,
-span:link {
-  border: none;
+.bi-trash {
+  color: red;
+}
+
+.bi {
+  cursor: pointer;
+}
+
+.lineThrough {
+  text-decoration: line-through;
+  color: #808080;
 }
 
 .add-button {

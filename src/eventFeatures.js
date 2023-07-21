@@ -62,21 +62,34 @@ const generateTodosList = () => {
       generateTodosList();
     });
 
+
     const todosDescription = document.createElement('span');
     todosDescription.textContent = task.description;
     todosDescription.contentEditable = true;
-    todosDescription.addEventListener('input', () => {
+    todosDescription.addEventListener('keypress', () => {
       editTodosDesc(index, todosDescription.textContent);
     });
+
+    if(checkbox.checked){
+      todosDescription.className = 'lineThrough';
+    }
 
     const actionsContainer = document.createElement('div');
     actionsContainer.classList.add('actions-container');
 
     const threeDostIcon = document.createElement('i');
     threeDostIcon.classList.add('bi', 'bi-three-dots-vertical');
-    threeDostIcon.addEventListener('click', () => {
-    });
 
+    // change the icon to trash and then delete the item
+    threeDostIcon.addEventListener('click', () => {
+      threeDostIcon.classList.remove('bi-three-dots-vertical');
+      threeDostIcon.classList.add('bi', 'bi-trash');
+      checkbox.checked = true;
+      upddateTodosStatus(index, checkbox.checked);
+      generateTodosList();
+    });
+    
+    // remove the selecte item
     const trashIcon = document.createElement('i');
     trashIcon.classList.add('bi', 'bi-trash');
     trashIcon.addEventListener('click', () => {
@@ -84,6 +97,7 @@ const generateTodosList = () => {
       generateTodosList();
     });
 
+  
     if (task.completed) {
       actionsContainer.appendChild(trashIcon);
     } else {
