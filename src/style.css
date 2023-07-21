@@ -140,6 +140,7 @@ span {
 
 .add-item input::placeholder {
   color: #808080;
+  font-size: 1rem;
 }
 
 .add-item i {
