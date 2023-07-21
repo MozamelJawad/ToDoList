@@ -1,4 +1,4 @@
-# ToDoList
+<h3 align="center"><b>To Do List Project </b></h3>
 
 <a name="readme-top"></a>
 
