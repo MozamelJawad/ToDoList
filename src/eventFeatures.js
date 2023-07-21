@@ -62,7 +62,6 @@ const generateTodosList = () => {
       generateTodosList();
     });
 
-
     const todosDescription = document.createElement('span');
     todosDescription.textContent = task.description;
     todosDescription.contentEditable = true;
@@ -70,7 +69,7 @@ const generateTodosList = () => {
       editTodosDesc(index, todosDescription.textContent);
     });
 
-    if(checkbox.checked){
+    if (checkbox.checked) {
       todosDescription.className = 'lineThrough';
     }
 
@@ -88,7 +87,7 @@ const generateTodosList = () => {
       upddateTodosStatus(index, checkbox.checked);
       generateTodosList();
     });
-    
+
     // remove the selecte item
     const trashIcon = document.createElement('i');
     trashIcon.classList.add('bi', 'bi-trash');
@@ -97,7 +96,6 @@ const generateTodosList = () => {
       generateTodosList();
     });
 
-  
     if (task.completed) {
       actionsContainer.appendChild(trashIcon);
     } else {
