@@ -1,16 +1,6 @@
-// get from local storage
-const getToDosFromLocalStorage = () => {
-  const tasksString = localStorage.getItem('tasks');
-  if (tasksString) {
-    return JSON.parse(tasksString);
-  }
-  return [];
-};
-
-//   save in local Storage
-const saveToDosToLocalStorage = (tasks) => {
-  localStorage.setItem('tasks', JSON.stringify(tasks));
-};
+// import from js file
+import
+{ getToDosFromLocalStorage, saveToDosToLocalStorage } from './module/storeLocal.js';
 
 let tasks = getToDosFromLocalStorage();
 
@@ -31,6 +21,7 @@ const editTodosDesc = (index, newDescription) => {
   saveToDosToLocalStorage(tasks);
 };
 
+// update To Dos Status
 const upddateTodosStatus = (index, completed) => {
   tasks[index].completed = completed;
   saveToDosToLocalStorage(tasks);
@@ -65,18 +56,30 @@ const generateTodosList = () => {
     const todosDescription = document.createElement('span');
     todosDescription.textContent = task.description;
     todosDescription.contentEditable = true;
-    todosDescription.addEventListener('input', () => {
+    todosDescription.addEventListener('keypress', () => {
       editTodosDesc(index, todosDescription.textContent);
     });
+
+    if (checkbox.checked) {
+      todosDescription.className = 'lineThrough';
+    }
 
     const actionsContainer = document.createElement('div');
     actionsContainer.classList.add('actions-container');
 
     const threeDostIcon = document.createElement('i');
     threeDostIcon.classList.add('bi', 'bi-three-dots-vertical');
+
+    // change the icon to trash and then delete the item
     threeDostIcon.addEventListener('click', () => {
+      threeDostIcon.classList.remove('bi-three-dots-vertical');
+      threeDostIcon.classList.add('bi', 'bi-trash');
+      checkbox.checked = true;
+      upddateTodosStatus(index, checkbox.checked);
+      generateTodosList();
     });
 
+    // remove the selecte item
     const trashIcon = document.createElement('i');
     trashIcon.classList.add('bi', 'bi-trash');
     trashIcon.addEventListener('click', () => {
@@ -98,6 +101,7 @@ const generateTodosList = () => {
   });
 };
 
+//  Clear all completed To Dos
 const clearCompletedTodos = () => {
   tasks = tasks.filter((task) => !task.completed);
   saveToDosToLocalStorage(tasks);
