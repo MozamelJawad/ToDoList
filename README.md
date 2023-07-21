@@ -1,4 +1,5 @@
-<h3 align="center"><b>To Do List Project </b></h3>
+
+<h2 align="center"><b>To Do List Project </b></h2>
 
 <a name="readme-top"></a>
 
@@ -29,7 +30,7 @@
 # 📖 ToDoList <a name="about-project"></a>
 
 **ToDoList** is a learning project that builds in HTML, CSS, and Javascript and uses webpack to bundle Javascript; in this project, proper ES6 syntax is also implemented.
-
+The **ToDo List**  interactive application helps you to add your functionalities; in the case of completion, you can mark it as complete, and if you want to delete it, it will be completely deleted from the list and local storage.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
