@@ -10,6 +10,7 @@
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
+    - [Live Demo](#live-demo)
     - [Key Features](#key-features)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
@@ -41,6 +42,12 @@ The **ToDo List**  interactive application helps you to add your functionalities
     <li>CSS3</li>
     <li>JS (ES6 synthax)</li>
 </ul>
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo link](https://MozamelJawad.github.io/My_Portfolio/)
+
+##
 
 <!-- Features -->
 
