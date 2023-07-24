@@ -45,7 +45,7 @@ The **ToDo List**  interactive application helps you to add your functionalities
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo link](https://mozameljawad.github.io/ToDoList/dist/)
+- [Live Demo](https://mozameljawad.github.io/ToDoList/dist/)
 
 ##
 
