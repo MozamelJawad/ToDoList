@@ -1,3 +1,3 @@
 import './style.css';
 
-import './eventFeatures.js';
+import './module/eventFeatures.js';

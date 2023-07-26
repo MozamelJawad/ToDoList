@@ -1,6 +1,6 @@
 // import from js file
 import
-{ getToDosFromLocalStorage, saveToDosToLocalStorage } from './module/storeLocal.js';
+{ getToDosFromLocalStorage, saveToDosToLocalStorage } from './storeLocal.js';
 
 let tasks = getToDosFromLocalStorage();
 
