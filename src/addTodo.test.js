@@ -1,5 +1,5 @@
 import addTodos from './addTodo.js';
-import deleteElement from './deleteTodo.js';
+import removeTodos from './deleteTodo.js';
 
 // import the `jest-localstorage-mock` library to mock localStorage
 import 'jest-localstorage-mock';
@@ -65,7 +65,7 @@ describe('Remove the To Do from List and Local Storage', () => {
     expect(toDoList[0].completed).toBe(false);
     expect(toDoList[0].index).toBe(1);
 
-    // Create a DOM element similar to the one expected by deleteElement function
+    // Create a DOM element similar to the one expected by removeTodos function
     const listItemToDelete = document.createElement('li');
     listItemToDelete.className = 'toDoItem editList';
     listItemToDelete.id = '1';
@@ -93,8 +93,8 @@ describe('Remove the To Do from List and Local Storage', () => {
     // Mock the removeChild method of the list element
     list.removeChild = jest.fn();
 
-    // Call the deleteElement function with the DOM element
-    deleteElement(listItemToDelete);
+    // Call the removeTodos function with the DOM element
+    removeTodos(listItemToDelete);
 
     // Retrieve the data from localStorage after deleting the item
     const toDoListAfterDelete = JSON.parse(localStorage.getItem('tasks'));
