@@ -6,7 +6,7 @@ import 'jest-localstorage-mock';
 
 describe('Call addTodos Function', () => {
   beforeEach(() => {
-    localStorage.clear();
+    window.localStorage.clear();
   });
 
   afterEach(() => {
