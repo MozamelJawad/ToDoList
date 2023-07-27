@@ -2,9 +2,10 @@
 import
 { getToDosFromLocalStorage, saveToDosToLocalStorage } from './storeLocal.js';
 
-let tasks = getToDosFromLocalStorage();
+const tasks = getToDosFromLocalStorage();
 
-const addTodos = (description) => {
+// add todos
+export const addTodos = (description, tasks) => {
   const newTask = {
     description,
     completed: false,
@@ -16,13 +17,17 @@ const addTodos = (description) => {
 };
 
 // edit todos
-const editTodosDesc = (index, newDescription) => {
-  tasks[index].description = newDescription;
-  saveToDosToLocalStorage(tasks);
+export const editTodosDesc = (index, newDescription, tasks) => {
+  if (index >= 0 && index < tasks.length) {
+    tasks[index].description = newDescription;
+    saveToDosToLocalStorage(tasks);
+  } else {
+    /* console.error('invalid index'); */
+  }
 };
 
 // update To Dos Status
-const upddateTodosStatus = (index, completed) => {
+export const upddateTodosStatus = (index, completed, tasks) => {
   tasks[index].completed = completed;
   saveToDosToLocalStorage(tasks);
 };
@@ -102,10 +107,11 @@ const generateTodosList = () => {
 };
 
 //  Clear all completed To Dos
-const clearCompletedTodos = () => {
+export const clearCompletedTodos = (tasks) => {
   tasks = tasks.filter((task) => !task.completed);
   saveToDosToLocalStorage(tasks);
-  generateTodosList();
+  return tasks;
+  /* generateTodosList(tasks); */
 };
 
 document.addEventListener('DOMContentLoaded', () => {
