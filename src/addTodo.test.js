@@ -1,4 +1,3 @@
-// Import the functions to be tested
 import addTodos from './addTodo.js';
 import deleteElement from './deleteTodo.js';
 
@@ -16,7 +15,6 @@ describe('Call addTodos Function', () => {
 
   test('Add new To Do to the local storage', () => {
 
-    // call addTodos function wit test data
     addTodos('Description 1');
 
     // get data from localStorage
