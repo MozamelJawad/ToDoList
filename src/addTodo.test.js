@@ -14,7 +14,6 @@ describe('Call addTodos Function', () => {
   });
 
   test('Add new To Do to the local storage', () => {
-
     addTodos('Description 1');
 
     // get data from localStorage
@@ -28,7 +27,6 @@ describe('Call addTodos Function', () => {
   });
 
   test('Add multiple To Dos to the localStorage', () => {
-
     // Call the function multiple times for different test data
     addTodos('Description 1');
     addTodos('Description 2');
@@ -55,7 +53,6 @@ describe('Remove the To Do from List and Local Storage', () => {
   });
 
   test('New item shoud be added to the localStorage and then deleted from it', () => {
-
     // Call the addTodos function with test data
     addTodos('Description 1');
 
