@@ -53,6 +53,9 @@ The **ToDo List**  interactive application helps you to add your functionalities
 
 ### Key Features <a name="key-features"></a>
 
+- **The project allows users to add and remove thing from the to-do list**
+- **The user can remore the completed To Dos after completion**
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
@@ -109,6 +112,8 @@ Project can be deployed by using the gh-pages and other web platforms.
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **[I will try to add some more user interactivity using JS]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
