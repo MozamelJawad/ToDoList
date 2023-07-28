@@ -21,7 +21,6 @@ export const editTodosDesc = (index, newDescription, tasks) => {
   if (index >= 0 && index < tasks.length) {
     tasks[index].description = newDescription;
     saveToDosToLocalStorage(tasks);
-  } else {
   }
 };
 
