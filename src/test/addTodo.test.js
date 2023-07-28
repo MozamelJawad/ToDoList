@@ -1,5 +1,5 @@
-import addTodos from './addTodo.js';
-import removeTodos from './deleteTodo.js';
+import addTodos from '../addTodo.js'
+import removeTodos from '../deleteTodo.js';
 
 // import the `jest-localstorage-mock` library to mock localStorage
 import 'jest-localstorage-mock';

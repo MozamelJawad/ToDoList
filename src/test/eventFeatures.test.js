@@ -1,7 +1,7 @@
-import { editTodosDesc, upddateTodosStatus, clearCompletedTodos } from './module/eventFeatures.js';
+import { editTodosDesc, upddateTodosStatus, clearCompletedTodos } from '../module/eventFeatures.js';
 import
-{ getToDosFromLocalStorage } from './module/storeLocal.js';
-import addTodos from './addTodo.js';
+{ getToDosFromLocalStorage } from '../module/storeLocal.js';
+import addTodos from '../addTodo.js';
 import 'jest-localstorage-mock';
 
 describe('Tests Part 2', () => {
