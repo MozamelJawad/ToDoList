@@ -22,7 +22,6 @@ export const editTodosDesc = (index, newDescription, tasks) => {
     tasks[index].description = newDescription;
     saveToDosToLocalStorage(tasks);
   } else {
-    /* console.error('invalid index'); */
   }
 };
 
@@ -111,7 +110,6 @@ export const clearCompletedTodos = (tasks) => {
   tasks = tasks.filter((task) => !task.completed);
   saveToDosToLocalStorage(tasks);
   return tasks;
-  /* generateTodosList(tasks); */
 };
 
 document.addEventListener('DOMContentLoaded', () => {

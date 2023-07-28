@@ -37,7 +37,6 @@ describe('Tests Part 2', () => {
     expect(toDoList[0].description).toBe('Example 1');
     let tasks = getToDosFromLocalStorage();
     tasks[0].completed = true;
-    /* console.log(tasks.length); */
     tasks = clearCompletedTodos(tasks);
 
     expect(tasks.length).toBe(0);
