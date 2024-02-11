@@ -53,8 +53,8 @@ The **ToDo List**  interactive application helps you to add your functionalities
 
 ### Key Features <a name="key-features"></a>
 
-- **The project allows users to add and remove thing from the to-do list**
-- **The user can remore the completed To Dos after completion**
+- **The project allows users to add and remove things from the to-do list**
+- **The user can remove the completed To Dos after completion**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
